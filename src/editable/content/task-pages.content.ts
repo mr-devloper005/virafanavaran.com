@@ -9,61 +9,68 @@ export type TaskPageVoice = {
   chips: string[]
 }
 
+/*
+  Copy per task archive. `pdf` = Reference Library (public), `profile` =
+  Contributor (never surfaced publicly). All other tasks stay functional
+  but their archive is not promoted in this site's public navigation.
+*/
 export const taskPageVoices = {
-  article: {
-    eyebrow: 'Reading desk',
-    headline: 'Long-form articles with a calmer editorial rhythm.',
-    description: 'Use this page for essays, guides, explainers, and story-led posts. The layout should feel like a publication, not a directory.',
-    filterLabel: 'Choose article topic',
-    secondaryNote: 'Reading surfaces need space, hierarchy, and fewer distractions.',
-    chips: ['Editorial pacing', 'Topic filters', 'Long-read friendly'],
-  },
-  classified: {
-    eyebrow: 'Notice board',
-    headline: 'Fast-moving classifieds, offers, and time-sensitive posts.',
-    description: 'Classified content should feel quick to scan, practical, and action-oriented with less editorial decoration.',
-    filterLabel: 'Filter classified category',
-    secondaryNote: 'Prioritize urgency, short summaries, and direct browsing.',
-    chips: ['Fast scan', 'Offers', 'Action cues'],
-  },
-  sbm: {
-    eyebrow: 'Saved resources',
-    headline: 'Social bookmarks arranged like curated collections.',
-    description: 'Bookmark pages should feel like shelves of useful resources, tools, references, and collections.',
-    filterLabel: 'Filter collection',
-    secondaryNote: 'Curated resources need grouping and calm metadata.',
-    chips: ['Collections', 'Resources', 'Reference flow'],
+  pdf: {
+    eyebrow: 'Reference Library',
+    headline: 'A quiet library of reference material, always open.',
+    description:
+      'Curated reports, studies, guides and reference documents — searchable by category, downloadable in one click, no signup wall in the way.',
+    filterLabel: 'Filter by category',
+    secondaryNote: 'The library grows steadily; the freshest entries always sit up top.',
+    chips: ['Free to read', 'Every entry downloadable', 'Curated by hand'],
   },
   profile: {
-    eyebrow: 'People and profiles',
-    headline: 'Profiles with identity, trust, and reputation cues.',
-    description: 'Profile pages should make people, brands, and entities feel discoverable rather than buried in a generic feed.',
-    filterLabel: 'Filter profile category',
-    secondaryNote: 'Make identity and credibility visible before the grid begins.',
-    chips: ['Identity first', 'Trust cues', 'Creator/business cards'],
+    eyebrow: 'Contributor',
+    headline: 'The people behind the reference library.',
+    description: 'Records of contributors and the material they have brought into the reference library.',
+    filterLabel: 'Filter contributors',
+    secondaryNote: 'Contributor pages live at their own direct URL only.',
+    chips: ['Verified contributors', 'Editorial curation', 'Reader-first'],
   },
-  pdf: {
-    eyebrow: 'Document library',
-    headline: 'PDFs and documents presented as a useful library.',
-    description: 'PDF pages should feel like downloadable guides, reports, files, and reference material instead of normal articles.',
-    filterLabel: 'Filter document type',
-    secondaryNote: 'Document surfaces need archive cues, file context, and clear browsing.',
-    chips: ['Documents', 'Guides', 'Archive ready'],
+  article: {
+    eyebrow: 'Editorial',
+    headline: 'Long-form reads that give context to the reference material.',
+    description:
+      'Essays and long-form pieces that frame the material in the reference library — background, methodology, and considered analysis.',
+    filterLabel: 'Filter by topic',
+    secondaryNote: 'Reading space, hierarchy, and fewer distractions.',
+    chips: ['Editorial pacing', 'Long-read friendly'],
   },
   listing: {
-    eyebrow: 'Business directory',
-    headline: 'Business listings built for discovery and comparison.',
-    description: 'Listing pages should behave like a directory with trust cues, metadata, and a practical search rhythm.',
-    filterLabel: 'Filter business category',
-    secondaryNote: 'Prioritize comparison, location, and direct action paths.',
-    chips: ['Directory', 'Compare', 'Business discovery'],
+    eyebrow: 'Directory',
+    headline: 'Structured entries, organized for discovery.',
+    description: 'Directory-style entries with the metadata that matters up front.',
+    filterLabel: 'Filter category',
+    secondaryNote: 'Prioritize comparison and direct action paths.',
+    chips: ['Directory', 'Compare'],
+  },
+  classified: {
+    eyebrow: 'Notices',
+    headline: 'Time-sensitive posts, easy to scan.',
+    description: 'Notices and offers, presented with the essentials up front and no editorial decoration.',
+    filterLabel: 'Filter notice category',
+    secondaryNote: 'Fast scan, direct browsing.',
+    chips: ['Fast scan', 'Time-sensitive'],
   },
   image: {
-    eyebrow: 'Visual gallery',
-    headline: 'Image posts with a gallery-first browsing experience.',
-    description: 'Image pages should lead with visual impact, stronger cards, and a portfolio-like rhythm.',
-    filterLabel: 'Filter visual category',
-    secondaryNote: 'Let images carry the page before long text does.',
-    chips: ['Gallery', 'Visual-first', 'Portfolio mood'],
+    eyebrow: 'Visuals',
+    headline: 'A visual index — gallery-first browsing.',
+    description: 'Visual entries with a portfolio-like rhythm.',
+    filterLabel: 'Filter visuals',
+    secondaryNote: 'Let the image carry the page.',
+    chips: ['Gallery', 'Portfolio mood'],
+  },
+  sbm: {
+    eyebrow: 'Bookmarks',
+    headline: 'Saved links worth returning to.',
+    description: 'Curated shelves of resources, tools and references.',
+    filterLabel: 'Filter collection',
+    secondaryNote: 'Grouped, tagged, and calm.',
+    chips: ['Collections', 'References'],
   },
 } satisfies Record<TaskKey, TaskPageVoice>
