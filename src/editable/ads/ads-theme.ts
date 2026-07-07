@@ -11,7 +11,7 @@ export const adSkin: AdSkin = {
   border: '1px solid rgba(0,0,0,0.06)',
   shadow: '0 8px 30px rgba(0,0,0,0.06)',
   background: '#ffffff',
-  labelClassName: 'bg-[#FF6600] text-white',
+  labelClassName: 'bg-[#FF6600] text-[var(--slot4-page-text)]',
 }
 
 // Optional per-slot overrides — adjust only where you need to.

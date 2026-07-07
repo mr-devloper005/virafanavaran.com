@@ -40,7 +40,7 @@ export function EditableHeroCollage({ images }: { images: string[] }) {
                 key={i}
                 src={src}
                 alt=""
-                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1400ms] ease-in-out ${i === activeIndex ? 'opacity-100' : 'opacity-0'}`}
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1400ms] ease-in-out`}
                 loading={cell === 0 && i === 0 ? 'eager' : 'lazy'}
                 {...(cell === 0 && i === 0 ? { fetchPriority: 'high' as const } : {})}
               />
